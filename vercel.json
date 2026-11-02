@@ -5,6 +5,10 @@
       "destination": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/api/:match*"
     },
     {
+      "source": "/uploads/:match*",
+      "destination": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/uploads/:match*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

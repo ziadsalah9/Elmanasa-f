@@ -12,7 +12,7 @@ const Home = () => {
         <div className="hero-content">
           <span className="hero-eyebrow">تعلّم · تدرّب · تفوّق</span>
           <h1>
-            منصة <span className="text-gradient">مس رشا يحيى</span> التعليمية
+            منصة <span className="text-gradient">أ/رشا يحيى</span> التعليمية
           </h1>
           <p>
             مكان واحد للملاحظات والاختبارات التفاعلية. اختبر نفسك بأسئلة اختيار من متعدد

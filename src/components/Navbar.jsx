@@ -256,8 +256,19 @@ const Navbar = () => {
             <img className="brand-logo-img" src={logo} alt="شعار منصة مس رشا يحيى التعليمية" />
           </span>
           <span className="brand-text">
-            <strong>منصة مس رشا يحيى</strong>
-            <small>التعليمية</small>
+            <div className="brand-name" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', margin: '4px 0' }}>
+
+            <strong>منصة أ / رشا يحيى</strong>
+            <div>
+              <small>التعليمية</small>
+            </div>
+           
+            <span style={{ color: '#6b7280' }}>|</span>
+          <small>website</small>
+            <strong >Mrs/ Rasha Yahia </strong>
+
+          </div>
+
           </span>
         </Link>
 

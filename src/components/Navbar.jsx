@@ -7,6 +7,7 @@ import {
   logout,
   updateStoredUser,
 } from '../auth'
+import logo from '../assets/elmansa-logo.webp'
 
 const icons = {
   Chevron: () => (
@@ -251,7 +252,9 @@ const Navbar = () => {
     <header className="navbar">
       <div className="navbar-inner" ref={navRef}>
         <Link to="/" className="brand" onClick={closeAll}>
-          <span className="brand-logo">ر</span>
+          <span className="brand-logo">
+            <img className="brand-logo-img" src={logo} alt="شعار منصة مس رشا يحيى التعليمية" />
+          </span>
           <span className="brand-text">
             <strong>منصة مس رشا يحيى</strong>
             <small>التعليمية</small>

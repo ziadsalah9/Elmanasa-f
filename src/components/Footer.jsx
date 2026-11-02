@@ -25,8 +25,13 @@ const Footer = () => {
 
         <div className="footer-creator">
           <span className="footer-kicker">تصميم وتطوير المنصة</span>
-          <strong className="footer-name">زياد صلاح</strong>
-          <div className="footer-phones">
+     <div className="footer-name-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '8px', margin: '4px 0' }}>
+            <strong className="footer-name">م/ زياد صلاح</strong>
+            <span style={{ color: '#6b7280' }}>|</span>
+            <span className="footer-name" >Eng / Ziad Salah</span>
+          </div>
+          
+               <div className="footer-phones">
             <a href="tel:01020061562" className="footer-phone">
               <PhoneIcon />
               <span dir="ltr">01020061562</span>

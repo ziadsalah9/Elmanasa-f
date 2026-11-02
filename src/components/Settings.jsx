@@ -67,7 +67,7 @@ const Settings = () => {
       notifyScheduleUpdates: data.notifyScheduleUpdates,
     })
     if (syncTheme) {
-      setTheme(data.theme || 'light')
+      setTheme(data.theme || 'dark')
     }
   }
 

@@ -23,15 +23,19 @@ export function updateStoredUser(patch) {
   return next
 }
 
+const THEME_KEY = 'theme-v2'
+
 export function applyTheme(theme) {
   const next = theme === 'dark' ? 'dark' : 'light'
   document.documentElement.setAttribute('data-theme', next)
-  localStorage.setItem('theme', next)
+  document.documentElement.classList.toggle('dark', next === 'dark')
+  localStorage.setItem(THEME_KEY, next)
   return next
 }
 
-export function getInitialTheme(user = getUser()) {
-  return localStorage.getItem('theme') || user?.theme || 'light'
+export function getInitialTheme() {
+  const stored = localStorage.getItem(THEME_KEY)
+  return stored === 'light' || stored === 'dark' ? stored : 'dark'
 }
 
 export const LEVELS = [

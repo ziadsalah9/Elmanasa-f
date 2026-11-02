@@ -21,7 +21,7 @@ const Login = () => {
       })
       localStorage.setItem('token', response.data.token)
       localStorage.setItem('user', JSON.stringify(response.data))
-      applyTheme(response.data.theme || 'light')
+      applyTheme(response.data.theme || 'dark')
       navigate('/dashboard')
     } catch (err) {
       setError('رقم الهاتف أو كلمة المرور غير صحيحة')

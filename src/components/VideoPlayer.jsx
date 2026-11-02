@@ -348,7 +348,11 @@ const VideoPlayer = () => {
             {comments.map(comment => (
               <article key={comment.id} className="comment-item">
                 <div className="comment-head">
-                  <span className="comment-avatar">{comment.userName?.charAt(0) || '؟'}</span>
+                  {comment.userAvatarUrl ? (
+                    <img className="comment-avatar comment-avatar-img" src={comment.userAvatarUrl} alt={comment.userName || 'صورة المستخدم'} />
+                  ) : (
+                    <span className="comment-avatar">{comment.userName?.charAt(0) || '؟'}</span>
+                  )}
                   <div>
                     <div className="comment-author">
                       {comment.userName}
@@ -378,7 +382,11 @@ const VideoPlayer = () => {
                     {comment.replies.map(reply => (
                       <article key={reply.id} className="comment-item comment-reply">
                         <div className="comment-head">
-                          <span className="comment-avatar">{reply.userName?.charAt(0) || '؟'}</span>
+                          {reply.userAvatarUrl ? (
+                            <img className="comment-avatar comment-avatar-img" src={reply.userAvatarUrl} alt={reply.userName || 'صورة المستخدم'} />
+                          ) : (
+                            <span className="comment-avatar">{reply.userName?.charAt(0) || '؟'}</span>
+                          )}
                           <div>
                             <div className="comment-author">
                               {reply.userName}

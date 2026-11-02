@@ -1,13 +1,36 @@
 {
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/api/$1",
+      "transforms": [
+        {
+          "type": "request.headers",
+          "op": "set",
+          "target": {
+            "key": "ngrok-skip-browser-warning"
+          },
+          "args": "true"
+        }
+      ]
+    },
+    {
+      "src": "/uploads/(.*)",
+      "dest": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/uploads/$1",
+      "transforms": [
+        {
+          "type": "request.headers",
+          "op": "set",
+          "target": {
+            "key": "ngrok-skip-browser-warning"
+          },
+          "args": "true"
+        }
+      ]
+    }
+  ],
   "rewrites": [
-    {
-      "source": "/api/:match*",
-      "destination": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/api/:match*"
-    },
-    {
-      "source": "/uploads/:match*",
-      "destination": "https://unaspirated-ivory-conglutinative.ngrok-free.dev/uploads/:match*"
-    },
     {
       "source": "/(.*)",
       "destination": "/index.html"

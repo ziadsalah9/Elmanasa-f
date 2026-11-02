@@ -2,6 +2,7 @@
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { applyTheme } from '../auth'
+import Footer from './Footer'
 import './Login.css'
 
 const Login = () => {
@@ -29,8 +30,9 @@ const Login = () => {
   }
 
   return (
-    <div className="login-container">
-      <div className="login-card">
+    <div className="auth-shell">
+      <div className="login-container">
+        <div className="login-card">
         <h2 className="login-title">منصة مس رشا يحيى التعليمية</h2>
         <h3 className="login-subtitle">تسجيل الدخول</h3>
         
@@ -66,7 +68,9 @@ const Login = () => {
             <a href="/register" style={{ color: '#667eea', textDecoration: 'none' }}>تسجيل حساب جديد</a>
           </p>
         </form>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }

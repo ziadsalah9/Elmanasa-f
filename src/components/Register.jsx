@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Link, useNavigate } from 'react-router-dom'
+import Footer from './Footer'
 import './Login.css'
 
 const Register = () => {
@@ -59,8 +60,9 @@ const Register = () => {
   }
 
   return (
-    <div className="login-container">
-      <div className="login-card">
+    <div className="auth-shell">
+      <div className="login-container">
+        <div className="login-card">
         <h2 className="login-title">منصة مس رشا يحيى التعليمية</h2>
         <h3 className="login-subtitle">تسجيل جديد</h3>
         <form onSubmit={step === 2 ? handleSubmit : (e) => { e.preventDefault(); handleSendOtp(); }} className="login-form">
@@ -169,7 +171,9 @@ const Register = () => {
             لديك حساب بالفعل؟ <Link to="/login">تسجيل الدخول</Link>
           </p>
         </form>
+        </div>
       </div>
+      <Footer />
     </div>
   )
 }

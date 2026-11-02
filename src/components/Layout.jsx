@@ -1,6 +1,7 @@
 import React from 'react'
 import { Outlet } from 'react-router-dom'
 import Navbar from './Navbar'
+import Footer from './Footer'
 
 const Layout = () => (
   <div className="app-shell">
@@ -8,9 +9,7 @@ const Layout = () => (
     <main className="page-container">
       <Outlet />
     </main>
-    <footer className="footer">
-      © {new Date().getFullYear()} منصة مس رشا يحيى التعليمية — جميع الحقوق محفوظة
-    </footer>
+    <Footer />
   </div>
 )
 
